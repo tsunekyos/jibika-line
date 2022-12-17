@@ -1,15 +1,15 @@
 import requests
 import json
-import env
+import config
 
 URL = 'https://api.line.me/v2/bot/message/push'
 HEADERS = {
   'Content-Type': 'application/json' ,
-  'Authorization': 'Bearer ' + env.LINE_CHANNEL_ACCESS_TOKEN,
+  'Authorization': 'Bearer ' + config.LINE_CHANNEL_ACCESS_TOKEN,
 }
 
 PAYLOAD_BASE = {
-    "to": env.LINE_USER_ID,
+    "to": config.LINE_USER_ID,
     "messages":[
       {
         "type": "text",
@@ -17,6 +17,9 @@ PAYLOAD_BASE = {
       }
     ]
 }
+
+print(config.LINE_CHANNEL_ACCESS_TOKEN)
+print(config.LINE_USER_ID)
 
 def create_payload(text):
   payload = PAYLOAD_BASE

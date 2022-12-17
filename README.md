@@ -8,7 +8,8 @@
 ## pipからインストールしたパッケージ
 - request
 - python-dotenv
-- selenium
+- [Selenium])(https://www.selenium.dev/documentation/)
+  - ブラウザ操作
 - ※ これらをlambda上で使うためには、以下の `aws-layer` の操作も必要
 
 ## aws-layer

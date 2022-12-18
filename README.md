@@ -20,3 +20,7 @@ $ cd aws-layer
 $ pip install -t python <任意のパッケージ名>
 $ zip -r9 layer.zip python
 ```
+
+## メモ
+### API Gateway と Lambdaについて
+- クエリ文字列は、 `event.queryStringParameters['<パラメータ名>']` で取得できる
